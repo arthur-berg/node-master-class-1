@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
   if (trimmedPath === "hello") {
     res.setHeader("Content-Type", "application/json");
     res.end(
-      JSON.stringify({ message: "Welcome to Arthurs first small node app" })
+      JSON.stringify({ message: "Welcome to Arthurs first small node app\n" })
     );
   } else {
     res.end();
