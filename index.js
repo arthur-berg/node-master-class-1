@@ -8,7 +8,10 @@ const server = http.createServer((req, res) => {
   const trimmedPath = path.replace(/^\/+|\/+$/g, "");
 
   if (trimmedPath === "hello") {
-    res.end({ message: "Welcome to Arthurs first small node app" });
+    res.setHeader("Content-Type", "application/json");
+    res.end(
+      JSON.stringify({ message: "Welcome to Arthurs first small node app" })
+    );
   } else {
     res.end();
   }
