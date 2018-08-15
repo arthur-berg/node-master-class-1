@@ -8,9 +8,9 @@ const server = http.createServer((req, res) => {
   const trimmedPath = path.replace(/^\/+|\/+$/g, "");
 
   if (trimmedPath === "hello") {
-    res.end("Welcome to Arthurs first small node app");
+    res.end({ message: "Welcome to Arthurs first small node app" });
   } else {
-    res.end("YOU ARE NOT WELCOME HERE!");
+    res.end();
   }
 });
 
